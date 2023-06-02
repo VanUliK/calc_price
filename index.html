@@ -18,7 +18,7 @@
       <div class="element"><input type="checkbox" id="elem_krysha_150" value="1000">Крыша</div>
       <div class="element"><input type="checkbox" id="elem_kapot_150" value="800">Капот</div>
       <div class="element"> <input type="checkbox" id="elem_bumper_150" value="600">Бампер</div>
-      <div class="element"><input type="checkbox" id="elem_krylo_150" value="400">Крыло</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_150" value="">Крыло</div>
     </div>
     <div class="row">
       <div class="price">120</div>
@@ -71,6 +71,10 @@
       elem_bumper_61 = document.querySelector('#elem_bumper_61'),
       elem_krylo_61 = document.querySelector('#elem_krylo_61');
 
+    elem_bumper_61.addEventListener('click', function (e) {
+      elem_bumper_61.checked
+      console.log('test');
+    });
     button.addEventListener('click', function (e) {
 
       for (var i = 0; i < checkboxes.length; i++) {
