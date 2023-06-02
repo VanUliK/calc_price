@@ -14,32 +14,45 @@
 
     <div class="row">
       <div class="price">150</div>
-
-      <div class="element"><input type="checkbox" id="elem_krysha_150" value="1000">Крыша</div>
-      <div class="element"><input type="checkbox" id="elem_kapot_150" value="800">Капот</div>
-      <div class="element"> <input type="checkbox" id="elem_bumper_150" value="600">Бампер</div>
+      <div class="length"><input id="length_krysha_150" placeholder="Введите длину в см" type="text"></div>
+      <div class="element">
+        <input type="checkbox" id="elem_krysha_150" value="">Крыша
+      </div>
+      <div class="length"><input id="length_kapot_150" placeholder="Введите длину в см" type="text"></div>
+      <div class="element"><input type="checkbox" id="elem_kapot_150" value="">Капот</div>
+      <div class="length"><input id="length_bumper_150" placeholder="Введите длину в см" type="text"></div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_150" value="">Бампер</div>
+      <div class="length"><input id="length_krylo_150" placeholder="Введите длину в см" type="text"></div>
       <div class="element"><input type="checkbox" id="elem_krylo_150" value="">Крыло</div>
     </div>
     <div class="row">
       <div class="price">120</div>
-      <div class="element"><input type="checkbox" id="elem_krysha_120" value="a1">Крыша</div>
-      <div class="element"><input type="checkbox" id="elem_kapot_120" value="a2">Капот</div>
-      <div class="element"> <input type="checkbox" id="elem_bumper_120" value="a3">Бампер</div>
-      <div class="element"><input type="checkbox" id="elem_krylo_120" value="a4">Крыло</div>
+      <div class="length"><input id="length_krysha_120" placeholder="Введите длину в см" type="text"></div>
+      <div class="element">
+        <input type="checkbox" id="elem_krysha_120" value="">Крыша
+      </div>
+      <div class="length"><input id="length_kapot_120" placeholder="Введите длину в см" type="text"></div>
+      <div class="element"><input type="checkbox" id="elem_kapot_120" value="">Капот</div>
+      <div class="length"><input id="length_bumper_120" placeholder="Введите длину в см" type="text"></div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_120" value="">Бампер</div>
+      <div class="length"><input id="length_krylo_120" placeholder="Введите длину в см" type="text"></div>
+      <div class="element"><input type="checkbox" id="elem_krylo_120" value="">Крыло</div>
     </div>
     <div class="row">
       <div class="price">76</div>
-      <div class="element"><input type="checkbox" id="elem_krysha_76" value="a1">Крыша</div>
-      <div class="element"><input type="checkbox" id="elem_kapot_76" value="a2">Капот</div>
-      <div class="element"> <input type="checkbox" id="elem_bumper_76" value="a3">Бампер</div>
-      <div class="element"><input type="checkbox" id="elem_krylo_76" value="a4">Крыло</div>
+      <div class="length"><input id="length_76" type="text"></div>
+      <div class="element"><input type="checkbox" id="elem_krysha_76" value="">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_76" value="">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_76" value="">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_76" value="">Крыло</div>
     </div>
     <div class="row">
       <div class="price">61</div>
-      <div class="element"><input type="checkbox" id="elem_krysha_61" value="a1">Крыша</div>
-      <div class="element"><input type="checkbox" id="elem_kapot_61" value="a2">Капот</div>
-      <div class="element"> <input type="checkbox" id="elem_bumper_61" value="a3">Бампер</div>
-      <div class="element"><input type="checkbox" id="elem_krylo_61" value="a4">Крыло</div>
+      <div class="length"><input id="length_61" type="text"></div>
+      <div class="element"><input type="checkbox" id="elem_krysha_61" value="">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_61" value="">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_61" value="">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_61" value="">Крыло</div>
     </div>
 
   </div>
@@ -69,7 +82,18 @@
       elem_krysha_61 = document.querySelector('#elem_krysha_61'),
       elem_kapot_61 = document.querySelector('#elem_kapot_61'),
       elem_bumper_61 = document.querySelector('#elem_bumper_61'),
-      elem_krylo_61 = document.querySelector('#elem_krylo_61');
+      elem_krylo_61 = document.querySelector('#elem_krylo_61'),
+
+      length_krysha_150 = document.querySelector('#length_krysha_150'),
+      length_kapot_150 = document.querySelector('#length_kapot_150'),
+      length_bumper_150 = document.querySelector('#length_bumper_150'),
+      length_krylo_150 = document.querySelector('#length_krylo_150'),
+      length_krysha_120 = document.querySelector('#length_krysha_120'),
+      length_kapot_120 = document.querySelector('#length_kapot_120'),
+      length_bumper_120 = document.querySelector('#length_bumper_120'),
+      length_krylo_120 = document.querySelector('#length_krylo_120'),
+      length_76 = document.querySelector('#length_76'),
+      length_61 = document.querySelector('#length_61');
 
     elem_bumper_61.addEventListener('click', function (e) {
       elem_bumper_61.checked
@@ -80,56 +104,56 @@
       for (var i = 0; i < checkboxes.length; i++) {
 
         if (elem_krysha_150.checked) {
-          elem_krysha_150.value = 1000 * 1.5
+          elem_krysha_150.value = 1000 * length_krysha_150.value
         }
         else {
           elem_krysha_150.value = 0
         }
 
         if (elem_kapot_150.checked) {
-          elem_kapot_150.value = 800 * 1.5
+          elem_kapot_150.value = 800 * length_kapot_150.value
         }
         else {
           elem_kapot_150.value = 0
         }
 
         if (elem_bumper_150.checked) {
-          elem_bumper_150.value = 600 * 1.5
+          elem_bumper_150.value = 600 * length_bumper_150.value
         }
         else {
           elem_bumper_150.value = 0
         }
 
-        if (elem_krylo_120.checked) {
-          elem_krylo_120.value = 400 * 1.5
+        if (elem_krylo_150.checked) {
+          elem_krylo_150.value = 400 * length_krylo_150.value
         }
         else {
-          elem_krylo_120.value = 0
+          elem_krylo_150.value = 0
         }
 
         if (elem_krysha_120.checked) {
-          elem_krysha_120.value = 1000 * 1.2
+          elem_krysha_120.value = 1000 * length_krysha_120.value
         }
         else {
           elem_krysha_120.value = 0
         }
 
         if (elem_kapot_120.checked) {
-          elem_kapot_120.value = 800 * 1.2
+          elem_kapot_120.value = 800 * length_kapot_120.value
         }
         else {
           elem_kapot_120.value = 0
         }
 
         if (elem_bumper_120.checked) {
-          elem_bumper_120.value = 600 * 1.2
+          elem_bumper_120.value = 600 * length_bumper_120.value
         }
         else {
           elem_bumper_120.value = 0
         }
 
         if (elem_krylo_120.checked) {
-          elem_krylo_120.value = 400 * 1.2
+          elem_krylo_120.value = 400 * length_krylo_120.value
         }
         else {
           elem_krylo_120.value = 0
@@ -137,28 +161,28 @@
 
 
         if (elem_krysha_76.checked) {
-          elem_krysha_76.value = 1000 * 0.76
+          elem_krysha_76.value = 1000 * length_76.value
         }
         else {
           elem_krysha_76.value = 0
         }
 
         if (elem_kapot_76.checked) {
-          elem_kapot_76.value = 800 * 0.76
+          elem_kapot_76.value = 800 * length_76.value
         }
         else {
           elem_kapot_76.value = 0
         }
 
         if (elem_bumper_76.checked) {
-          elem_bumper_76.value = 600 * 0.76
+          elem_bumper_76.value = 600 * length_76.value
         }
         else {
           elem_bumper_76.value = 0
         }
 
         if (elem_krylo_76.checked) {
-          elem_krylo_76.value = 400 * 0.76
+          elem_krylo_76.value = 400 * length_76.value
         }
         else {
           elem_krylo_76.value = 0
@@ -166,28 +190,28 @@
 
 
         if (elem_krysha_61.checked) {
-          elem_krysha_61.value = 1000 * 0.61
+          elem_krysha_61.value = 1000 * length_61.value
         }
         else {
           elem_krysha_61.value = 0
         }
 
         if (elem_kapot_61.checked) {
-          elem_kapot_61.value = 800 * 0.61
+          elem_kapot_61.value = 800 * length_61.value
         }
         else {
           elem_kapot_61.value = 0
         }
 
         if (elem_bumper_61.checked) {
-          elem_bumper_61.value = 600 * 0.61
+          elem_bumper_61.value = 600 * length_61.value
         }
         else {
           elem_bumper_61.value = 0
         }
 
         if (elem_krylo_61.checked) {
-          elem_krylo_61.value = 400 * 0.61
+          elem_krylo_61.value = 400 * length_61.value
         }
         else {
           elem_krylo_61.value = 0
