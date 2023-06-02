@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="table">
+
+    <div class="row">
+      <div class="price">150</div>
+
+      <div class="element"><input type="checkbox" id="elem_krysha_150" value="1000">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_150" value="800">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_150" value="600">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_150" value="400">Крыло</div>
+    </div>
+    <div class="row">
+      <div class="price">120</div>
+      <div class="element"><input type="checkbox" id="elem_krysha_120" value="a1">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_120" value="a2">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_120" value="a3">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_120" value="a4">Крыло</div>
+    </div>
+    <div class="row">
+      <div class="price">76</div>
+      <div class="element"><input type="checkbox" id="elem_krysha_76" value="a1">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_76" value="a2">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_76" value="a3">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_76" value="a4">Крыло</div>
+    </div>
+    <div class="row">
+      <div class="price">61</div>
+      <div class="element"><input type="checkbox" id="elem_krysha_61" value="a1">Крыша</div>
+      <div class="element"><input type="checkbox" id="elem_kapot_61" value="a2">Капот</div>
+      <div class="element"> <input type="checkbox" id="elem_bumper_61" value="a3">Бампер</div>
+      <div class="element"><input type="checkbox" id="elem_krylo_61" value="a4">Крыло</div>
+    </div>
+
+  </div>
+  <div class="total">
+    <div class="total_price"><span id="out">0</span> <span class="rub">₽</span></div>
+    <div class="button">
+      <input type="button" name="adress" id="btn" class="button" value="Считать" />
+    </div>
+  </div>
+
+  <script>
+    const button = document.querySelector('#btn');
+    const checkboxes = document.querySelectorAll('input[type=checkbox]'),
+
+      elem_krysha_150 = document.querySelector('#elem_krysha_150'),
+      elem_kapot_150 = document.querySelector('#elem_kapot_150'),
+      elem_bumper_150 = document.querySelector('#elem_bumper_150'),
+      elem_krylo_150 = document.querySelector('#elem_krylo_150'),
+      elem_krysha_120 = document.querySelector('#elem_krysha_120'),
+      elem_kapot_120 = document.querySelector('#elem_kapot_120'),
+      elem_bumper_120 = document.querySelector('#elem_bumper_120'),
+      elem_krylo_120 = document.querySelector('#elem_krylo_120'),
+      elem_krysha_76 = document.querySelector('#elem_krysha_76'),
+      elem_kapot_76 = document.querySelector('#elem_kapot_76'),
+      elem_bumper_76 = document.querySelector('#elem_bumper_76'),
+      elem_krylo_76 = document.querySelector('#elem_krylo_76'),
+      elem_krysha_61 = document.querySelector('#elem_krysha_61'),
+      elem_kapot_61 = document.querySelector('#elem_kapot_61'),
+      elem_bumper_61 = document.querySelector('#elem_bumper_61'),
+      elem_krylo_61 = document.querySelector('#elem_krylo_61');
+
+    button.addEventListener('click', function (e) {
+
+      for (var i = 0; i < checkboxes.length; i++) {
+
+        if (elem_krysha_150.checked) {
+          elem_krysha_150.value = 1000 * 1.5
+        }
+        else {
+          elem_krysha_150.value = 0
+        }
+
+        if (elem_kapot_150.checked) {
+          elem_kapot_150.value = 800 * 1.5
+        }
+        else {
+          elem_kapot_150.value = 0
+        }
+
+        if (elem_bumper_150.checked) {
+          elem_bumper_150.value = 600 * 1.5
+        }
+        else {
+          elem_bumper_150.value = 0
+        }
+
+        if (elem_krylo_120.checked) {
+          elem_krylo_120.value = 400 * 1.5
+        }
+        else {
+          elem_krylo_120.value = 0
+        }
+
+        if (elem_krysha_120.checked) {
+          elem_krysha_120.value = 1000 * 1.2
+        }
+        else {
+          elem_krysha_120.value = 0
+        }
+
+        if (elem_kapot_120.checked) {
+          elem_kapot_120.value = 800 * 1.2
+        }
+        else {
+          elem_kapot_120.value = 0
+        }
+
+        if (elem_bumper_120.checked) {
+          elem_bumper_120.value = 600 * 1.2
+        }
+        else {
+          elem_bumper_120.value = 0
+        }
+
+        if (elem_krylo_120.checked) {
+          elem_krylo_120.value = 400 * 1.2
+        }
+        else {
+          elem_krylo_120.value = 0
+        }
+
+
+        if (elem_krysha_76.checked) {
+          elem_krysha_76.value = 1000 * 0.76
+        }
+        else {
+          elem_krysha_76.value = 0
+        }
+
+        if (elem_kapot_76.checked) {
+          elem_kapot_76.value = 800 * 0.76
+        }
+        else {
+          elem_kapot_76.value = 0
+        }
+
+        if (elem_bumper_76.checked) {
+          elem_bumper_76.value = 600 * 0.76
+        }
+        else {
+          elem_bumper_76.value = 0
+        }
+
+        if (elem_krylo_76.checked) {
+          elem_krylo_76.value = 400 * 0.76
+        }
+        else {
+          elem_krylo_76.value = 0
+        }
+
+
+        if (elem_krysha_61.checked) {
+          elem_krysha_61.value = 1000 * 0.61
+        }
+        else {
+          elem_krysha_61.value = 0
+        }
+
+        if (elem_kapot_61.checked) {
+          elem_kapot_61.value = 800 * 0.61
+        }
+        else {
+          elem_kapot_61.value = 0
+        }
+
+        if (elem_bumper_61.checked) {
+          elem_bumper_61.value = 600 * 0.61
+        }
+        else {
+          elem_bumper_61.value = 0
+        }
+
+        if (elem_krylo_61.checked) {
+          elem_krylo_61.value = 400 * 0.61
+        }
+        else {
+          elem_krylo_61.value = 0
+        }
+
+        let sum = Number(elem_krysha_150.value) + Number(elem_kapot_150.value) + Number(elem_bumper_150.value) + Number(elem_krylo_150.value) + Number(elem_krysha_120.value) + Number(elem_kapot_120.value) + Number(elem_bumper_120.value) + Number(elem_krylo_120.value) + Number(elem_krysha_76.value) + Number(elem_kapot_76.value) + Number(elem_bumper_76.value) + Number(elem_krylo_76.value) + Number(elem_krysha_61.value) + Number(elem_kapot_61.value) + Number(elem_bumper_61.value) + Number(elem_krylo_61.value)
+        out.innerHTML = sum;
+
+      }
+
+    });
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
