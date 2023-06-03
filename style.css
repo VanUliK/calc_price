@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
-    gap: 40px;
+    gap: 20px;
   }
 }
 
@@ -50,6 +50,5 @@
   .table {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px;
   }
 }
