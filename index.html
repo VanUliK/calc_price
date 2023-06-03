@@ -13,6 +13,8 @@
   <div class="table">
 
     <div class="row">
+      <div class="length"><input id="price_150" placeholder="цена за метр" type="text"></div>
+
       <div class="price">150</div>
       <div class="length"><input id="length_krysha_150" placeholder="Введите длину в см" type="text"></div>
       <div class="element">
@@ -26,6 +28,7 @@
       <div class="element"><input type="checkbox" id="elem_krylo_150" value="">Крыло</div>
     </div>
     <div class="row">
+      <div class="length"><input id="price_120" placeholder="цена за метр" type="text"></div>
       <div class="price">120</div>
       <div class="length"><input id="length_krysha_120" placeholder="Введите длину в см" type="text"></div>
       <div class="element">
@@ -39,19 +42,31 @@
       <div class="element"><input type="checkbox" id="elem_krylo_120" value="">Крыло</div>
     </div>
     <div class="row">
+      <div class="length"><input id="price_76" placeholder="цена за метр" type="text"></div>
       <div class="price">76</div>
-      <div class="length"><input id="length_76" type="text"></div>
-      <div class="element"><input type="checkbox" id="elem_krysha_76" value="">Крыша</div>
+      <div class="length"><input id="length_krysha_76" placeholder="Введите длину в см" type="text"></div>
+      <div class="element">
+        <input type="checkbox" id="elem_krysha_76" value="">Крыша
+      </div>
+      <div class="length"><input id="length_kapot_76" placeholder="Введите длину в см" type="text"></div>
       <div class="element"><input type="checkbox" id="elem_kapot_76" value="">Капот</div>
+      <div class="length"><input id="length_bumper_76" placeholder="Введите длину в см" type="text"></div>
       <div class="element"> <input type="checkbox" id="elem_bumper_76" value="">Бампер</div>
+      <div class="length"><input id="length_krylo_76" placeholder="Введите длину в см" type="text"></div>
       <div class="element"><input type="checkbox" id="elem_krylo_76" value="">Крыло</div>
     </div>
     <div class="row">
+      <div class="length"><input id="price_61" placeholder="цена за метр" type="text"></div>
       <div class="price">61</div>
-      <div class="length"><input id="length_61" type="text"></div>
-      <div class="element"><input type="checkbox" id="elem_krysha_61" value="">Крыша</div>
+      <div class="length"><input id="length_krysha_61" placeholder="Введите длину в см" type="text"></div>
+      <div class="element">
+        <input type="checkbox" id="elem_krysha_61" value="">Крыша
+      </div>
+      <div class="length"><input id="length_kapot_61" placeholder="Введите длину в см" type="text"></div>
       <div class="element"><input type="checkbox" id="elem_kapot_61" value="">Капот</div>
+      <div class="length"><input id="length_bumper_61" placeholder="Введите длину в см" type="text"></div>
       <div class="element"> <input type="checkbox" id="elem_bumper_61" value="">Бампер</div>
+      <div class="length"><input id="length_krylo_61" placeholder="Введите длину в см" type="text"></div>
       <div class="element"><input type="checkbox" id="elem_krylo_61" value="">Крыло</div>
     </div>
 
@@ -66,7 +81,10 @@
   <script>
     const button = document.querySelector('#btn');
     const checkboxes = document.querySelectorAll('input[type=checkbox]'),
-
+      price_150 = document.querySelector('#price_150'),
+      price_120 = document.querySelector('#price_120'),
+      price_76 = document.querySelector('#price_76'),
+      price_61 = document.querySelector('#price_61'),
       elem_krysha_150 = document.querySelector('#elem_krysha_150'),
       elem_kapot_150 = document.querySelector('#elem_kapot_150'),
       elem_bumper_150 = document.querySelector('#elem_bumper_150'),
@@ -92,130 +110,132 @@
       length_kapot_120 = document.querySelector('#length_kapot_120'),
       length_bumper_120 = document.querySelector('#length_bumper_120'),
       length_krylo_120 = document.querySelector('#length_krylo_120'),
-      length_76 = document.querySelector('#length_76'),
-      length_61 = document.querySelector('#length_61');
+      length_krysha_76 = document.querySelector('#length_krysha_76'),
+      length_kapot_76 = document.querySelector('#length_kapot_76'),
+      length_bumper_76 = document.querySelector('#length_bumper_76'),
+      length_krylo_76 = document.querySelector('#length_krylo_76'),
+      length_krysha_61 = document.querySelector('#length_krysha_61'),
+      length_kapot_61 = document.querySelector('#length_kapot_61'),
+      length_bumper_61 = document.querySelector('#length_bumper_61'),
+      length_krylo_61 = document.querySelector('#length_krylo_61');
 
-    elem_bumper_61.addEventListener('click', function (e) {
-      elem_bumper_61.checked
-      console.log('test');
-    });
+
     button.addEventListener('click', function (e) {
 
       for (var i = 0; i < checkboxes.length; i++) {
 
         if (elem_krysha_150.checked) {
-          elem_krysha_150.value = 1000 * length_krysha_150.value
+          elem_krysha_150.value = price_150.value * 0.01 * length_krysha_150.value
         }
         else {
           elem_krysha_150.value = 0
         }
 
         if (elem_kapot_150.checked) {
-          elem_kapot_150.value = 800 * length_kapot_150.value
+          elem_kapot_150.value = price_150.value * 0.01 * length_kapot_150.value
         }
         else {
           elem_kapot_150.value = 0
         }
 
         if (elem_bumper_150.checked) {
-          elem_bumper_150.value = 600 * length_bumper_150.value
+          elem_bumper_150.value = price_150.value * 0.01 * length_bumper_150.value
         }
         else {
           elem_bumper_150.value = 0
         }
 
         if (elem_krylo_150.checked) {
-          elem_krylo_150.value = 400 * length_krylo_150.value
+          elem_krylo_150.value = price_150.value * 0.01 * length_krylo_150.value
         }
         else {
           elem_krylo_150.value = 0
         }
 
         if (elem_krysha_120.checked) {
-          elem_krysha_120.value = 1000 * length_krysha_120.value
+          elem_krysha_120.value = price_120.value * 0.01 * length_krysha_120.value
         }
         else {
           elem_krysha_120.value = 0
         }
 
         if (elem_kapot_120.checked) {
-          elem_kapot_120.value = 800 * length_kapot_120.value
+          elem_kapot_120.value = price_120.value * 0.01 * length_kapot_120.value
         }
         else {
           elem_kapot_120.value = 0
         }
 
         if (elem_bumper_120.checked) {
-          elem_bumper_120.value = 600 * length_bumper_120.value
+          elem_bumper_120.value = price_120.value * 0.01 * length_bumper_120.value
         }
         else {
           elem_bumper_120.value = 0
         }
 
         if (elem_krylo_120.checked) {
-          elem_krylo_120.value = 400 * length_krylo_120.value
+          elem_krylo_120.value = price_120.value * 0.01 * length_krylo_120.value
         }
         else {
           elem_krylo_120.value = 0
         }
 
-
         if (elem_krysha_76.checked) {
-          elem_krysha_76.value = 1000 * length_76.value
+          elem_krysha_76.value = price_76.value * 0.01 * length_krysha_76.value
         }
         else {
           elem_krysha_76.value = 0
         }
 
         if (elem_kapot_76.checked) {
-          elem_kapot_76.value = 800 * length_76.value
+          elem_kapot_76.value = price_76.value * 0.01 * length_kapot_76.value
         }
         else {
           elem_kapot_76.value = 0
         }
 
         if (elem_bumper_76.checked) {
-          elem_bumper_76.value = 600 * length_76.value
+          elem_bumper_76.value = price_76.value * 0.01 * length_bumper_76.value
         }
         else {
           elem_bumper_76.value = 0
         }
 
         if (elem_krylo_76.checked) {
-          elem_krylo_76.value = 400 * length_76.value
+          elem_krylo_76.value = price_76.value * 0.01 * length_krylo_76.value
         }
         else {
           elem_krylo_76.value = 0
         }
 
-
         if (elem_krysha_61.checked) {
-          elem_krysha_61.value = 1000 * length_61.value
+          elem_krysha_61.value = price_61.value * 0.01 * length_krysha_61.value
         }
         else {
           elem_krysha_61.value = 0
         }
 
         if (elem_kapot_61.checked) {
-          elem_kapot_61.value = 800 * length_61.value
+          elem_kapot_61.value = price_61.value * 0.01 * length_kapot_61.value
         }
         else {
           elem_kapot_61.value = 0
         }
 
         if (elem_bumper_61.checked) {
-          elem_bumper_61.value = 600 * length_61.value
+          elem_bumper_61.value = price_61.value * 0.01 * length_bumper_61.value
         }
         else {
           elem_bumper_61.value = 0
         }
 
         if (elem_krylo_61.checked) {
-          elem_krylo_61.value = 400 * length_61.value
+          elem_krylo_61.value = price_61.value * 0.01 * length_krylo_61.value
         }
         else {
           elem_krylo_61.value = 0
         }
+
 
         let sum = Number(elem_krysha_150.value) + Number(elem_kapot_150.value) + Number(elem_bumper_150.value) + Number(elem_krylo_150.value) + Number(elem_krysha_120.value) + Number(elem_kapot_120.value) + Number(elem_bumper_120.value) + Number(elem_krylo_120.value) + Number(elem_krysha_76.value) + Number(elem_kapot_76.value) + Number(elem_bumper_76.value) + Number(elem_krylo_76.value) + Number(elem_krysha_61.value) + Number(elem_kapot_61.value) + Number(elem_bumper_61.value) + Number(elem_krylo_61.value)
         out.innerHTML = sum;
