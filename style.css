@@ -37,10 +37,19 @@
   border: 1px solid #000;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 860px) {
   .table {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
     gap: 40px;
+  }
+}
+
+@media (max-width: 440px) {
+  .table {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
