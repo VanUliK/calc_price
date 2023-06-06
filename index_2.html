@@ -40,9 +40,9 @@
       button.addEventListener('click', function (e) {
         console.log(price.value);
         let lengthMetr = lengthEl.value / 100
-        let wodthMetr = widthEl.value / 100
+        let widthMetr = widthEl.value / 100
         let pricePogon = price.value / 1.5
-        let sum = lengthMetr * wodthMetr * pricePogon;
+        let sum = lengthMetr * widthMetr * pricePogon;
 
         out.innerHTML = sum;
       });
