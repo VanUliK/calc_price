@@ -14,6 +14,7 @@
 
   <div class="cena">
     <div class="length"><input id="price" placeholder="цена за метр" type="text"></div>
+    <div class="width"><input id="widthRool" placeholder="Введите ширину рулона в см" type="text"></div>
     <!-- <div class="element">
       <input type="checkbox" id="elem_krysha_150" value="">15м
       <input type="checkbox" id="elem_krysha_150" value="">20м
@@ -35,13 +36,16 @@
       const price = document.querySelector('#price');
       const lengthEl = document.querySelector('#length');
       const widthEl = document.querySelector('#width');
+      const widthRool = document.querySelector('#widthRool');
+
+
 
 
       button.addEventListener('click', function (e) {
         console.log(price.value);
-        let lengthMetr = lengthEl.value / 100
-        let widthMetr = widthEl.value / 100
-        let pricePogon = price.value / 1.5
+        let lengthMetr = lengthEl.value / 100;
+        let widthMetr = widthEl.value / 100;
+        let pricePogon = price.value / widthRool.value * 100;
         let sum = lengthMetr * widthMetr * pricePogon;
 
         out.innerHTML = sum;
