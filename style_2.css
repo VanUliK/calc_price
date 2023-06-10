@@ -16,11 +16,6 @@
   align-items: center;
 }
 
-input {
-  height: 30px;
-  font-size: 14px;
-}
-
 /* text field */
 .text-field {
   margin-bottom: 1rem;
