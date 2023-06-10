@@ -14,6 +14,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+}
+.total_price {
+  font-size: 20px;
+}
+
+.button {
+  width: 100px;
+  height: 30px;
 }
 
 /* text field */

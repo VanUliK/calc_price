@@ -55,13 +55,12 @@
 
 
     button.addEventListener('click', function (e) {
-      console.log(price.value);
       let lengthMetr = lengthEl.value / 100;
       let widthMetr = widthEl.value / 100;
       let pricePogon = price.value / widthRool.value * 100;
       let sum = lengthMetr * widthMetr * pricePogon;
-
       out.innerHTML = Math.round(sum);
+      console.log(sum);
     });
 
 
